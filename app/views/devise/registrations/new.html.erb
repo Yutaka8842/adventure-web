@@ -1,6 +1,6 @@
 <header>
   <div id="header-image"></div>
-  <h1 id ="logo"><a href="#">Adventure</a></h1>
+  <h1><%= link_to "Adventure", root_path, id:"logo" %></h1>
   <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= devise_error_messages! %>
 
