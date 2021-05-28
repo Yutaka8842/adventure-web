@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get 'todo',       to: 'rooms#todo'
       get 'schedule',   to: 'rooms#schedule'
       get 'gallery',    to: 'rooms#gallery'
+      post 'join',      to: 'rooms#join'
     end
   end
 end

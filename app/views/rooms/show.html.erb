@@ -1,0 +1,5 @@
+<%= @room.title %>
+  <%= form_with model: @room, url: join_room_path, method: :post, id: 'addroom-form', class: 'addroom-form', local: true do |f| %>
+
+        <%= f.submit "Add", class:"actions" %>
+    <% end %>

@@ -5,8 +5,8 @@ class CreateRooms < ActiveRecord::Migration[6.0]
       t.string    :overview,  null: false
       t.text      :details
       t.integer   :budget
-      t.integer   :capacity,  null: false
-      t.integer   :category,  null: false
+      t.integer   :capacity
+      t.integer   :category
       t.integer   :leader,    null: false
       t.timestamps
     end
