@@ -6,13 +6,33 @@
       <div class="main-head">
         <div class="main-index">ChatRoom</div>
       </div>
-      <% @messages.each do |message| %>
-        <div class="content"><%= message.content %></div>
-
-      <% end %>
+      <div class="message-area" id="scroll-message">
+        <% @messages.each do |message| %>
+          <div class="message" >
+            <div class="upper-message">
+              <div class="message-user">
+                <%= message.user.name%>
+              </div>
+            </div>
+            <div class="lower-message">
+              <div class="message-content">
+                <%= message.content %> 
+              </div>
+              <%= image_tag message.image.variant(resize: '200x200'), class: 'message-image' if message.image.attached? %>
+              <div class="message-date">
+                <%= l message.created_at %>
+              </div> 
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <%= form_with model: [@room, @message], class:"message", local: true do |f| %>
+    <%= form_with model: [@room, @message], class:"message-form", local: true do |f| %>
+
       <%= f.text_field :content, class:"message-field", placeholder:"Message", autofocus: true %>
+      <label class="input-image">
+      <%= f.file_field :image, class: "upload-file" %>
+      </label>
       <%= f.submit "", class:"send"%>
     <% end %>
   </div>
