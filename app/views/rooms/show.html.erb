@@ -1,5 +1,39 @@
-<%= @room.title %>
-  <%= form_with model: @room, url: join_room_path, method: :post, id: 'addroom-form', class: 'addroom-form', local: true do |f| %>
+<div class="body">
+  <%= render partial: 'left_navigation'%>
+  <div class="content">
+    <div class="contents-bg"></div>
+    <div class="main">
+      <div class="main-head">
+        <div class="main-index">RoomDetail</div>
+      </div>
+      <div class="detail">
+        <div class="left-content">
+          <div class="detail-label">Title</div>
+          <div class="title"> <%= @room.title %></div>
 
-        <%= f.submit "Add", class:"actions" %>
-    <% end %>
+          <div class="detail-label">Leader</div>
+          <div class="leader"> <%= @room.leader %></div>
+
+          <div class="detail-label">Capacity</div>
+          <div class="capacity"> <%= @room.capacity %></div>
+
+          <div class="detail-label">Category</div>
+          <div class="category"> <%= @room.category %></div>
+
+          <div class="detail-label">Overview</div>
+          <div class="overview"> <%= @room.overview %></div>
+        </div>
+
+        <div class="right-content">
+          <div class="detail-label">Details</div>
+          <div class="details"> <%= @room.details %></div>
+          <%= form_with model: @room, url: join_room_path, method: :post, local: true do |f| %>
+            <%= f.submit "Add", class:"actions" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -84,6 +84,7 @@ margin: auto;
 		text-align: center;
 		border-radius: 5px;
 		width: 100%;
+		height: 30px;
 	}
 
 	.createaccount{
@@ -205,7 +206,7 @@ height: 50px;
 	padding: 30px;
 }
 .main-head{
-	height: 10%;
+	height: 50px;
 	width: 100%;
 	border-bottom: 1px solid white;
 	display: flex;
@@ -221,13 +222,15 @@ height: 50px;
 .add-room{
 color: white;
 padding: 10px;
-margin: 0 0 20px 0;
 border: white solid 1px;
+margin: 0 0 10px 0;
+border-radius: 5px;
 }
 
 .addroom-form{
 	width: 100%;
-	height: 100%;
+	height:  calc(100% - 40px);
+	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	padding: 10px 0 ;
@@ -281,4 +284,95 @@ border-bottom: white solid 1px;
 display: flex;
 justify-content: space-between;
 padding-top: 10px;
+}
+
+.room-list{
+	height:  calc(100% - 40px);
+	display:flex;
+	flex-wrap:wrap;
+	padding: 10px;
+	color: white;
+	overflow-y: scroll;
+}
+.room{
+	border: white solid 1px;
+	border-radius: 10px;
+	width: calc(100% / 3 - 20px);
+	height: 200px;
+	margin: 10px;
+	padding: 20px;
+}
+
+.room-title{
+font-weight: bold;
+font-size: 30px;
+}
+
+.room-overview{
+	overflow-y: scroll;
+
+}
+
+.detail{
+	height: calc(100% - 40px);
+	width: 100%;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+	overflow-y: scroll;
+	padding: 30px;
+}
+
+.title{
+	width: 500px;
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.left-content{
+	margin-right: 10px;
+}
+
+.leader{
+	width: 500px;
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.capacity{
+	width: 500px;
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.category{
+	width: 500px;
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.overview{
+	width: 500px;
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+
+.details{
+	width: 500px;
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow-y: scroll;
 }

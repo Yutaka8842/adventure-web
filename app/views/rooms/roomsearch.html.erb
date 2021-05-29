@@ -7,13 +7,14 @@
         <div class="main-index">RoomSearch</div>
         <div class="add-room" ><%= link_to "Add Room", new_room_path %></div>
       </div>
+      <div class="room-list">
     <% @rooms.each do |room| %>
     <div class="room">
-      <div class="room-name"> 
-        <%= link_to room.title, room_path(room.id) %>
-      </div>
+        <%= link_to room.title, room_path(room.id), class:"room-title"%>
+      <div class="room-overview"><%= room.overview %></div>
     </div>
   <% end %>
+  </div>
     </div>
   </div>
 </div>
