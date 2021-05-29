@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "rooms#mypage"
+  
   resources :rooms do
+    resources :messages
     member do
       get 'mypage',     to: 'rooms#mypage'
       get 'chatroom',   to: 'rooms#chatroom'

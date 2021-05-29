@@ -26,6 +26,9 @@ class RoomsController < ApplicationController
   end
 
   def chatroom
+    @message = Message.new
+    @room = Room.find(params[:id])
+    @messages = @room.messages.includes(:user)
   end
 
   def roomsearch
