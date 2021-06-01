@@ -28,7 +28,6 @@
       </div>
     </div>
     <%= form_with model: [@room, @message], class:"message-form", local: true do |f| %>
-
       <%= f.text_field :content, class:"message-field", placeholder:"Message", autofocus: true %>
       <label class="input-image">
       <%= f.file_field :image, class: "upload-file" %>

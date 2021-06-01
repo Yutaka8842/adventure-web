@@ -27,7 +27,8 @@ class RoomsController < ApplicationController
 
   def chatroom
     @message = Message.new
-    @room = Room.find(params[:id])
+    @roomuser = RoomUser.find_by(user_id: current_user.id)
+    @room = Room.find(@roomuser.room_id)
     @messages = @room.messages.includes(:user)
   end
 
