@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: adventure_production
-  username: adventure
-  password: <%= ENV['ADVENTURE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
