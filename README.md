@@ -22,8 +22,9 @@
 - https://adventure-web.com/
 
 # テスト用アカウント	
+- Name: aaaa
 - Email: aaa@gmail.com
-- Password: aaa111
+- Password: aaaaaa
 
 # 目指した課題解決
 - ワクワクを共有できる仲間が周りに居ない
