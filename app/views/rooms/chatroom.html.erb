@@ -10,7 +10,11 @@
         <% @messages.each do |message| %>
           <div class="message" >
             <div class="left-message">
-              <%= image_tag message.user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class: "message-user-icon" %>
+              <% if message.user.icon.attached? %>
+                <%= image_tag message.user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class: "user-icon" %>
+              <% else %>
+                <%= image_tag "user-icon.png", class:"user-icon" %>
+              <% end %><br />
               <div class="message-user">
                 <div class="message-name">
                   <%= message.user.name%>
