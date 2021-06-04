@@ -307,6 +307,7 @@ padding-top: 10px;
 .room-title{
 font-weight: bold;
 font-size: 30px;
+height: 50px;
 }
 
 .room-overview{
@@ -335,7 +336,7 @@ font-size: 30px;
 	margin-right: 10px;
 }
 
-.leader{
+.budget{
 	width: 500px;
 	border: #ffffff solid 1px;
 	border-radius: 5px;
@@ -375,4 +376,53 @@ font-size: 30px;
 	margin-bottom: 10px;
 	padding: 10px;
 	overflow-y: scroll;
+}
+
+.edit-user{
+	color: white;
+	padding: 10px;
+	border: white solid 1px;
+	margin: 0 0 10px 0;
+	border-radius: 5px;
+	}
+
+	.user-icon{
+		border-radius: 20px;
+		height: 100px;
+		margin: 10px 0 0 10px;
+	}
+
+.name{
+	color: #ffffff;
+	font-size: large;
+	font-weight: bold;
+	padding: 20px;
+	margin: 10px;
+	border: #ffffff solid 1px;
+}
+
+.profile-area{
+	color: #ffffff;
+	border: #ffffff solid 1px;
+	height: 300px;
+	padding: 20px;
+	margin: 10px;
+	font-size: large;
+	font-weight: bold;
+	overflow-y: scroll;
+}
+
+.mypage-content{
+	overflow-y: scroll;
+	height: calc(100% - 40px);
+}
+
+.alert{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: large;
+	font-weight: bold;
+	color: #ffffff;
+	height: calc(100% - 40px);
 }

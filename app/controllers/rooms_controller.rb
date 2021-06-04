@@ -19,17 +19,29 @@ class RoomsController < ApplicationController
 
   def join
     @room = Room.find(params[:id])
-    RoomUser.create(room_id: @room.id, user_id: current_user.id)
+    if RoomUser.create(room_id: @room.id, user_id: current_user.id)
+      redirect_to chatroom_room_path
+    else
+      redirect_to room_path
+    end
   end
 
   def mypage
+    @user = User.find(current_user.id)
   end
 
   def chatroom
+    if RoomUser.find_by(user_id: current_user.id).present?
     @message = Message.new
     @roomuser = RoomUser.find_by(user_id: current_user.id)
     @room = Room.find(@roomuser.room_id)
     @messages = @room.messages.includes(:user)
+    else
+      redirect_to blankroom_room_path
+    end
+  end
+
+  def blankroom
   end
 
   def roomsearch
@@ -37,6 +49,7 @@ class RoomsController < ApplicationController
   end
 
   def todo
+
   end
 
   def schedule
