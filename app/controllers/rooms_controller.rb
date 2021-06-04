@@ -32,10 +32,10 @@ class RoomsController < ApplicationController
 
   def chatroom
     if RoomUser.find_by(user_id: current_user.id).present?
-    @message = Message.new
-    @roomuser = RoomUser.find_by(user_id: current_user.id)
-    @room = Room.find(@roomuser.room_id)
-    @messages = @room.messages.includes(:user)
+      @message = Message.new
+      @roomuser = RoomUser.find_by(user_id: current_user.id)
+      @room = Room.find(@roomuser.room_id)
+      @messages = @room.messages.includes(:user)
     else
       redirect_to blankroom_room_path
     end

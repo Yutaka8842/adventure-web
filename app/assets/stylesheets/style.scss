@@ -230,7 +230,7 @@ border-radius: 5px;
 
 .addroom-form{
 	width: 100%;
-	height:  calc(100% - 40px);
+	height: calc(100% - 40px);
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -261,7 +261,7 @@ border-radius: 5px;
 }
 
 .upload-file{
-		display: none;
+	display: none;
 }
 .message-area{
 	overflow: scroll;
@@ -275,20 +275,38 @@ padding: 10px;
 color: white;
 border-top: white solid 1px;
 border-bottom: white solid 1px;
-}
-
-.upper-message{
-	font-weight: bold;
-}
-
-.lower-message{
 display: flex;
 justify-content: space-between;
-padding-top: 10px;
+}
+
+.message-user-icon{
+	border-radius: 20px;
+	height: 80px;
+}
+
+.left-message{
+	display: flex;
+}
+
+.message-name{
+	font-weight: bold;
+	font-size: large;
+	margin-left: 10px;
+	padding-bottom: 5px;
+
+}
+
+.message-content{
+	font-size: medium;
+	margin-left: 10px;
+}
+.right-message{
+display: flex;
+align-items: flex-end;
 }
 
 .room-list{
-	height:  calc(100% - 40px);
+	height: calc(100% - 40px);
 	display:flex;
 	flex-wrap:wrap;
 	padding: 10px;
@@ -425,4 +443,14 @@ height: 50px;
 	font-weight: bold;
 	color: #ffffff;
 	height: calc(100% - 40px);
+}
+
+.profile-input{
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	width: 100%;
+	height: 200px;
+	color: #ffffff;
+	padding: 5px;
+	font-size: 20px;
 }
