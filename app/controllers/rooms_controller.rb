@@ -17,6 +17,34 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
   end
 
+  def edit
+    @roomuser = RoomUser.find_by(user_id: current_user.id)
+    @room = Room.find(@roomuser.room_id)
+  end
+
+  def update
+    @roomuser = RoomUser.find_by(user_id: current_user.id)
+    @room = Room.find(@roomuser.room_id)
+    if @room.update(room_update_params)
+      redirect_to chatroom_room_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @roomuser = RoomUser.find_by(user_id: current_user.id)
+    @room = Room.find(@roomuser.room_id)
+    @room.destroy
+    redirect_to root_path
+  end
+
+  def exit
+    @roomuser = RoomUser.find_by(user_id: current_user.id)
+    @roomuser.destroy
+    redirect_to root_path
+  end
+
   def join
     @room = Room.find(params[:id])
     if RoomUser.create(room_id: @room.id, user_id: current_user.id)
@@ -62,6 +90,10 @@ class RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit(:title, :category, :capacity, :overview, :budget, :details, user_ids: []).merge(leader: current_user.id)
+  end
+
+  def room_update_params
+    params.require(:room).permit(:title, :category, :capacity, :overview, :budget, :details)
   end
 
 

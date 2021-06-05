@@ -28,7 +28,9 @@
           <div class="detail-label">Details</div>
           <div class="details"> <%= @room.details %></div>
           <%= form_with model: @room, url: join_room_path, method: :post, local: true do |f| %>
+          <% if RoomUser.find_by(user_id: current_user.id).blank? %>
             <%= f.submit "Add", class:"actions" %>
+            <% end %>
           <% end %>
         </div>
       </div>

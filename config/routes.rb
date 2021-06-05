@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: "rooms#mypage"
-  get 'users/show'
+  resources :users, only: :show
   resources :rooms do
     resources :messages
     member do
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get 'schedule',   to: 'rooms#schedule'
       get 'gallery',    to: 'rooms#gallery'
       post 'join',      to: 'rooms#join'
+      get 'exit',    to: 'rooms#exit'
     end
   end
 end

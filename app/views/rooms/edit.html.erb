@@ -1,0 +1,39 @@
+<div class="body">
+  <%= render partial: 'left_navigation'%>
+  <div class="content">
+    <div class="contents-bg"></div>
+    <div class="main">
+      <div class="main-head">
+        <div class="main-index">EditRoom</div>
+        <% if @room.leader == current_user.id %>
+        <div class="main-head-btn" ><%= link_to "Delete Room", room_path, method: :delete %></div>
+        <% else %>
+        <div class="main-head-btn" ><%= link_to "Exit Room", exit_room_path %></div>
+        <% end %>
+      </div>
+      <%= form_with model: @room, id: 'addroom-form', class: 'addroom-form', local: true do |f| %>
+
+        <div class="form-left">
+        <%= render 'shared/error_messages', model: f.object %>
+        <%= f.label :title, class:"field-label"%><br />
+        <%= f.text_field :title, class:"field-input f", autofocus: true %><br />
+
+        <%= f.label :capacity, class:"field-label" %><br />
+        <%= f.text_field :capacity, class:"field-input f"%><br />
+
+        <%= f.label :overview, class:"field-label" %><br />
+        <%= f.text_area :overview, class:"field-input f overview" %><br />
+
+        <%= f.label :budget, class:"field-label" %><br />
+        <%= f.text_field :budget, class:"field-input f" %><br />
+          </div>
+          <div class="form-right">
+        <%= f.label :details, class:"field-label" %><br />
+        <%= f.text_area :details, class:"field-input f details" %><br />
+
+        <%= f.submit "Update", class:"actions" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

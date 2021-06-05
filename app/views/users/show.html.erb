@@ -1,2 +1,24 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="body">
+  <%= render partial: 'left_navigation'%>
+  <div class="content">
+    <div class="contents-bg"></div>
+    <div class="main">
+      <div class="main-head">
+        <div class="main-index"><%= "#{@user.name}さんのMyPage" %></div>
+        <div class="main-head-btn" ><%= link_to "Edit User", edit_user_registration_path %></div>
+      </div>
+      <div class="mypage-content">
+      <% if @user.icon.attached? %>
+        <%= image_tag @user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class: "user-icon" %>
+      <% else %>
+        <%= image_tag "user-icon.png", class:"user-icon" %>
+      <% end %>
+        <div class="name">Name:  <%= @user.name %></div>
+        <div class="profile-area">
+          <div class="profile-label">Profile:</div><br />
+          <div class="profile"><%= @user.profile %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

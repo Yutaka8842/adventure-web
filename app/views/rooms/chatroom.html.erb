@@ -5,20 +5,20 @@
     <div class="chatmain">
       <div class="main-head">
         <div class="main-index">ChatRoom</div>
-        <div class="main-head-btn" ><%= link_to "Edit Room", '#' %></div>
+        <div class="main-head-btn" ><%= link_to "Edit Room", edit_room_path %></div>
       </div>
       <div class="message-area" id="scroll-message">
         <% @messages.each do |message| %>
           <div class="message" >
             <div class="left-message">
               <% if message.user.icon.attached? %>
-                <%= image_tag message.user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class: "message-user-icon" %>
+                <%= image_tag message.user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class:"message-user-icon" %>
               <% else %>
                 <%= image_tag "user-icon.png", class:"message-user-icon" %>
               <% end %><br />
               <div class="message-user">
                 <div class="message-name">
-                  <%= message.user.name%>
+                  <%= link_to  message.user.name, user_path(message.user_id) %>
                 </div><br />
                 <div class="message-content">
                   <%= message.content %> 

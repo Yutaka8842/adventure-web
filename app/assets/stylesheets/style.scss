@@ -6,7 +6,6 @@ a {
 	text-decoration: none;
 	width:100%;
   height:100%;
-	display: block;
 }
 
 textarea{
@@ -41,16 +40,16 @@ header #header-image{
 .logo {
 	width: 100%;
 	height: 500px;
-font-size: 100px;
-font-weight: bold;
-color: #ffffff;
-text-align: center;
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-margin: auto;
+	font-size: 100px;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 
@@ -128,6 +127,10 @@ margin: auto;
 	color: white;
 }
 
+.nav-list {
+	display: block;
+}
+
 .nav li{
 	margin: 40px 20px;
 	border-left: gray solid 1px;
@@ -192,7 +195,7 @@ margin: auto;
 }
 
 .send{
-height: 50px;
+	height: 50px;
 	width: 50px;
 	background: image-url("send.png") no-repeat center center / cover;
 	margin: 0 5px 3px 0;
@@ -224,7 +227,7 @@ height: 50px;
 
 }
 
-.main-head-btn{
+.main-head-btn {
 color: white;
 padding: 10px;
 border: white solid 1px;
@@ -327,10 +330,12 @@ align-items: flex-end;
 }
 
 .room-title{
+	display: block;
 font-weight: bold;
 font-size: 30px;
 height: 50px;
 }
+
 
 .room-overview{
 	overflow-y: scroll;
