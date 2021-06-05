@@ -7,6 +7,7 @@
         <div class="main-index">Edit MyPage</div>
       </div>
       <%= form_with model: @user, url: user_registration_path, class: 'mypage-content', local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
       <% if @user.icon.attached? %>
         <%= image_tag @user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class: "user-icon" %>
       <% else %>

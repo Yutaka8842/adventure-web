@@ -6,13 +6,12 @@
       <div class="main-head">
         <div class="main-index">AddRoom</div>
       </div>
-  <%= form_with model: @room, id: 'addroom-form', class: 'addroom-form', local: true do |f| %>
+      <%= form_with model: @room, id: 'addroom-form', class: 'addroom-form', local: true do |f| %>
+
         <div class="form-left">
+        <%= render 'shared/error_messages', model: f.object %>
         <%= f.label :title, class:"field-label"%><br />
         <%= f.text_field :title, class:"field-input f", autofocus: true %><br />
-          
-        <%= f.label :category, class:"field-label" %><br />
-        <%#= f.collection_select(:category, class:"field-input") %><br />
 
         <%= f.label :capacity, class:"field-label" %><br />
         <%= f.text_field :capacity, class:"field-input f"%><br />
@@ -31,7 +30,7 @@
 
         <%= f.submit "Add", class:"actions" %>
         </div>
-    <% end %>
+      <% end %>
     </div>
   </div>
 </div>
