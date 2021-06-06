@@ -1,0 +1,23 @@
+<div class="message" id='messages' >
+  <div class="left-message">
+    <% if message.user.icon.attached? %>
+      <%= image_tag message.user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class:"message-user-icon" %>
+    <% else %>
+      <%= image_tag "user-icon.png", class:"message-user-icon" %>
+    <% end %><br />
+    <div class="message-user">
+      <div class="message-name">
+        <%= link_to  message.user.name, user_path(message.user_id) %>
+      </div><br />
+      <div class="message-content">
+        <%= message.content %> 
+      </div>
+    </div>
+  </div>
+  <%= image_tag message.image.variant(resize: '200x200'), class: 'message-image' if message.image.attached? %>
+  <div class="right-message">
+    <div class="message-date">
+      <%= l message.created_at %>
+    </div> 
+  </div>
+</div>
