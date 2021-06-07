@@ -1,9 +1,9 @@
 <div class="message" id='messages' >
-  <div class="left-message">
+  <div class="left-message" id="left-message">
     <% if message.user.icon.attached? %>
-      <%= image_tag message.user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class:"message-user-icon" %>
+      <%= image_tag message.user.icon.variant(gravity: :center, resize:"640x640^", crop:"640x640+0+0"), class:"message-user-icon", id:"message-user-icon" %>
     <% else %>
-      <%= image_tag "user-icon.png", class:"message-user-icon" %>
+      <%= image_tag "user-icon.png", class:"message-user-icon", id:"message-default-icon" %>
     <% end %><br />
     <div class="message-user">
       <div class="message-name">
