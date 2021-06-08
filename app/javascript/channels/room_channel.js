@@ -23,6 +23,7 @@ document.addEventListener('turbolinks:load', () => {
         },
     })
     const documentElement = document.getElementById('scroll-message')
+    window.messageContent = document.getElementById('message_content')
     window.scrollToBottom = () => {
       documentElement.scrollTop = documentElement.scrollHeight;
     };
