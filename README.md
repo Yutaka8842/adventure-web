@@ -6,12 +6,12 @@
 
 # 主な機能
 - ルームの一覧を見てルームに参加もしくはルームを作成することでチャットができる
+- ActionCableで双方向の非同期通信を実装しており、LINEのようなリアルタイムチャットができる
 
 # 実装予定の機能
 - ルーム詳細編集機能
 - スケジュール管理機能
 - ToDo機能
-- マイページ機能
 - ギャラリー機能
 
 # 洗い出した要件
@@ -22,9 +22,8 @@
 - https://adventure-web.com/
 
 # テスト用アカウント	
-- Name: aaaa
-- Email: aaa@gmail.com
-- Password: aaaaaa
+- Email: test@gmail.com
+- Password: testtest
 
 # 目指した課題解決
 - ワクワクを共有できる仲間が周りに居ない
