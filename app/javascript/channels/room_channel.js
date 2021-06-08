@@ -16,8 +16,9 @@ document.addEventListener('turbolinks:load', () => {
         },
 
         received(data) {
-
-            addMessage.insertAdjacentHTML('beforeend',  data['message'])
+            var str = data['message']
+            var message = str.replace( 'http://example.org', 'https://adventure-web.com' );
+            addMessage.insertAdjacentHTML('beforeend',  message)
 
         },
     })
