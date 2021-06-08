@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root to: "rooms#mypage"
   resources :users, only: :show
   resources :rooms do
+    resources :todos
+    resources :schedules
     resources :messages
     member do
       get 'mypage',     to: 'rooms#mypage'
