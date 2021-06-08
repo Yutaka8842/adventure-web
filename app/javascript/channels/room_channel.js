@@ -16,14 +16,12 @@ document.addEventListener('turbolinks:load', () => {
         },
 
         received(data) {
-            var str = data['message']
-            var message = str.replace( 'example.org', 'localhost:3000' );
-            addMessage.insertAdjacentHTML('beforeend',  message)
+
+            addMessage.insertAdjacentHTML('beforeend',  data['message'])
 
         },
     })
     const documentElement = document.getElementById('scroll-message')
-    window.messageContent = document.getElementById('message_content')
     window.scrollToBottom = () => {
       documentElement.scrollTop = documentElement.scrollHeight;
     };
