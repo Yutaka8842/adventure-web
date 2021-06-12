@@ -6,6 +6,7 @@
       <div class="main-head">
         <div class="main-index">AddRoom</div>
       </div>
+      <div class="main-area">
       <%= form_with model: @room, id: 'addroom-form', class: 'addroom-form', local: true do |f| %>
 
         <div class="form-left">
@@ -31,6 +32,7 @@
         <%= f.submit "Add", class:"actions" %>
         </div>
       <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+  <div class="body">
+  <%= render partial: 'rooms/left_navigation'%>
+  <div class="content">
+    <div class="contents-bg"></div>
+    <div class="main">
+      <div class="main-head">
+        <div class="main-index">AddSchedule</div>
+      </div>
+  <div class="main-area">
+  <%= form_with model: [@room, @schedule], id: 'addschedule-form', class: 'addshedule-form', local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%= f.label :date, class:"field-label"%><br />
+    <%= f.date_select :date, with_css_classes:"date-select" %><br />
+
+    <%= f.label :detail, class:"field-label"%><br />
+    <%= f.text_area :detail, class:"field-input f overview", autofocus: true %><br />
+
+    <%= f.submit "Add", class:"actions" %>
+    <% end %>
+</div>
+    </div>

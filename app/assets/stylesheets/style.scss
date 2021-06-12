@@ -270,7 +270,7 @@ border-radius: 5px;
 .upload-file{
 	display: none;
 }
-.message-area{
+.main-area{
 	overflow: scroll;
 	height:  calc(100% - 40px);
 	padding: 10px;
@@ -339,6 +339,9 @@ align-items: flex-end;
 font-weight: bold;
 font-size: 30px;
 height: 50px;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
 }
 
 
@@ -463,3 +466,14 @@ height: 50px;
 	padding: 5px;
 	font-size: 20px;
 }
+
+
+.year,.month,.day{
+border-radius: 5px;
+padding: 5px;
+ }
+
+ .addshedule-form{
+	 width: 200px;
+ }
+
