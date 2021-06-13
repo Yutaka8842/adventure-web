@@ -22,7 +22,7 @@
 - https://adventure-web.com/
 
 # テスト用アカウント	
-- Email: test@gmail.com
+- Email: test1@gmail.com
 - Password: testtest
 
 ※（１人のユーザーは１つの部屋にしか所属できない仕様です）
