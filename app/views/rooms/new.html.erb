@@ -11,25 +11,20 @@
 
         <div class="form-left">
         <%= render 'shared/error_messages', model: f.object %>
-        <%= f.label :title, class:"field-label"%><br />
-        <%= f.text_field :title, class:"field-input f", autofocus: true %><br />
+          <%= f.label :title, class:"field-label"%><br />
+          <%= f.text_field :title, class:"field-input f", autofocus: true %><br />
 
-        <%= f.label :capacity, class:"field-label" %><br />
-        <%= f.text_field :capacity, class:"field-input f"%><br />
+          <%= f.label :budget, class:"field-label" %><br />
+          <%= f.text_field :budget, class:"field-input f" %><br />
 
-        <%= f.label :overview, class:"field-label" %><br />
-        <%= f.text_area :overview, class:"field-input f overview" %><br />
-
-        <%= f.label :budget, class:"field-label" %><br />
-        <%= f.text_field :budget, class:"field-input f" %><br />
-          </div>
-          <div class="form-right">
-        <%= f.label :details, class:"field-label" %><br />
-        <%= f.text_area :details, class:"field-input f details" %><br />
-
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-
-        <%= f.submit "Add", class:"actions" %>
+          <%= f.label :overview, class:"field-label" %><br />
+          <%= f.text_area :overview, class:"field-input f overview" %><br />
+        </div>
+        <div class="form-right">
+          <%= f.label :details, class:"field-label" %><br />
+          <%= f.text_area :details, class:"field-input f details" %><br />
+          <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+          <%= f.submit "Add", class:"actions" %>
         </div>
       <% end %>
       </div>
