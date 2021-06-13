@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
   devise_for :users, controllers: { registrations: 'users/registrations' }
-  root to: "rooms#mypage"
+  root to: "rooms#chatroom"
+  get 'blankroom',  to: 'rooms#blankroom'
   resources :users, only: :show
   resources :rooms do
     resources :todos
@@ -10,7 +11,6 @@ Rails.application.routes.draw do
     member do
       get 'mypage',     to: 'rooms#mypage'
       get 'chatroom',   to: 'rooms#chatroom'
-      get 'blankroom',  to: 'rooms#blankroom'
       get 'roomsearch', to: 'rooms#roomsearch'
       get 'todo',       to: 'rooms#todo'
       get 'schedule',   to: 'rooms#schedule'

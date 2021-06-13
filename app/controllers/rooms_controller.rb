@@ -8,8 +8,8 @@ class RoomsController < ApplicationController
   def create
       @room = Room.new(room_params)
     if @room.valid?
-        @room.save
-        redirect_to root_path
+      @room.save
+      redirect_to root_path
     else
       render 'new'
     end
@@ -61,7 +61,7 @@ class RoomsController < ApplicationController
       @room = Room.find(@roomuser.room_id)
       @messages = @room.messages.includes(:user)
     else
-      redirect_to blankroom_room_path
+      redirect_to blankroom_path
     end
   end
 
@@ -73,7 +73,6 @@ class RoomsController < ApplicationController
   end
 
   def todo
-
   end
 
   def schedule
@@ -87,7 +86,6 @@ class RoomsController < ApplicationController
   end
 
   def gallery
-
   end
 
   private
@@ -99,11 +97,5 @@ class RoomsController < ApplicationController
   def room_update_params
     params.require(:room).permit(:title, :category, :capacity, :overview, :budget, :details)
   end
-
-  def params_current_room
-    @roomuser = RoomUser.find_by(user_id: current_user.id)
-    @room = Room.find(@roomuser.room_id)
-  end
-
 
 end

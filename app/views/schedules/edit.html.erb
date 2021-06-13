@@ -1,4 +1,4 @@
-  <div class="body">
+<div class="body">
   <%= render partial: 'rooms/left_navigation', locals: { room: @room }%>
   <div class="content">
     <div class="contents-bg"></div>
@@ -6,18 +6,20 @@
       <div class="main-head">
         <div class="main-index">EditSchedule</div>
       </div>
-  <div class="main-area">
-  <%= form_with model: [@room, @schedule], id: 'addschedule-form', class: 'addshedule-form', local: true do |f| %>
+      <div class="main-area">
+        <%= form_with model: [@room, @schedule], id: 'addschedule-form', class: 'addshedule-form', local: true do |f| %>
 
-    <%= render 'shared/error_messages', model: f.object %>
+          <%= render 'shared/error_messages', model: f.object %>
 
-    <%= f.label :date, class:"field-label"%><br />
-    <%= f.date_select :date, with_css_classes:"date-select" %><br />
+          <%= f.label :date, class:"field-label"%><br />
+          <%= f.date_select :date, with_css_classes:"date-select" %><br />
 
-    <%= f.label :detail, class:"field-label"%><br />
-    <%= f.text_area :detail, class:"field-input f overview", autofocus: true %><br />
+          <%= f.label :detail, class:"field-label"%><br />
+          <%= f.text_area :detail, class:"field-input f overview", autofocus: true %><br />
 
-    <%= f.submit "UpDate", class:"actions" %>
-    <% end %>
-</div>
+          <%= f.submit "UpDate", class:"actions" %>
+        <% end %>
+      </div>
     </div>
+  </div>
+</div>

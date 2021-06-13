@@ -6,17 +6,17 @@
       <div class="main-head">
         <div class="main-index">RoomSearch</div>
         <% if RoomUser.find_by(user_id: current_user.id).blank? %>
-        <div class="main-head-btn" ><%= link_to "Add Room", new_room_path %></div>
+          <div class="main-head-btn" ><%= link_to "Add Room", new_room_path %></div>
         <% end %>
       </div>
       <div class="room-list">
-      <% @rooms.each do |room| %>
-      <div class="room">
-        <%= link_to room.title, room_path(room.id), class:"room-title"%>
-      <div class="room-overview"><%= room.overview %></div>
-    </div>
-  <% end %>
-  </div>
+        <% @rooms.each do |room| %>
+          <div class="room">
+            <%= link_to room.title, room_path(room.id), class:"room-title"%>
+            <div class="room-overview"><%= room.overview %></div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

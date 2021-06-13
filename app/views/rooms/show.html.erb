@@ -11,25 +11,18 @@
           <div class="detail-label">Title</div>
           <div class="title"> <%= @room.title %></div>
 
-          <div class="detail-label">Capacity</div>
-          <div class="capacity"> <%= @room.capacity %></div>
-
-          <div class="detail-label">Category</div>
-          <div class="category"> <%= @room.category %></div>
-
           <div class="detail-label">Budget</div>
           <div class="budget"> <%= @room.budget %></div>
 
           <div class="detail-label">Overview</div>
           <div class="overview"> <%= @room.overview %></div>
         </div>
-
         <div class="right-content">
           <div class="detail-label">Details</div>
           <div class="details"> <%= @room.details %></div>
           <%= form_with model: @room, url: join_room_path, method: :post, local: true do |f| %>
           <% if RoomUser.find_by(user_id: current_user.id).blank? %>
-            <%= f.submit "Add", class:"actions" %>
+            <%= f.submit "Join", class:"actions" %>
             <% end %>
           <% end %>
         </div>
