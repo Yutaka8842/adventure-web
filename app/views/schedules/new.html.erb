@@ -7,7 +7,7 @@
         <div class="main-index">AddSchedule</div>
       </div>
       <div class="main-area">
-        <%= form_with model: [@room, @schedule], id: 'addschedule-form', class: 'addshedule-form', local: true do |f| %>
+        <%= form_with model: [@room, @schedule],url: room_schedules_path(@room.id), id: 'addschedule-form', class: 'addshedule-form', local: true do |f| %>
 
           <%= render 'shared/error_messages', model: f.object %>
 

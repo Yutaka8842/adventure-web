@@ -8,6 +8,7 @@ class Message < ApplicationRecord
   def was_attached?
     self.image.attached?
   end
+  
   def template
     ApplicationController.renderer.render partial: 'rooms/message', locals: { message: self }
   end

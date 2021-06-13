@@ -7,8 +7,13 @@ class SchedulesController < ApplicationController
 
   def create
     @room = RoomUser.find_by(user_id: current_user.id)
-    Schedule.create!(params.require(:schedule).permit(:date, :detail).merge(room_id: @room.room_id,))
-    redirect_to schedule_room_path(current_user.id)
+    @schedule = Schedule.new(params.require(:schedule).permit(:date, :detail).merge(room_id: @room.room_id,))
+    if @schedule.valid?
+      @schedule.save
+      redirect_to schedule_room_path(current_user.id)
+    else
+      render 'new'
+    end
   end
 
   def show
