@@ -7,6 +7,14 @@
         <div class="main-index">Schedule</div>
         <div class="main-head-btn" ><%= link_to "Add Schedule", new_room_schedule_path(@room) %></div>
       </div>
+      <div class="main-area">
+        <% @schedules.each do |schedules| %>
+          <div class="schedule-container">
+            <div class="schedule-date"><%= schedules.date %></div>
+            <div class="schedule-detail"><%= schedules.detail %></div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

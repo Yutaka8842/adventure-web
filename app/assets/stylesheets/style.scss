@@ -477,3 +477,18 @@ padding: 5px;
 	 width: 200px;
  }
 
+.schedule-container{
+	padding: 10px;
+	height: 200px;
+	width: 500px;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	margin: 10px 0 15px 0;
+	overflow: scroll;
+}
+
+.schedule-date{
+	font-size: large;
+	font-weight: bold;
+}

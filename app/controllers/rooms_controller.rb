@@ -84,13 +84,14 @@ class RoomsController < ApplicationController
     if RoomUser.find_by(user_id: current_user.id).present?
       @roomuser = RoomUser.find_by(user_id: current_user.id)
       @room = Room.find(@roomuser.room_id)
+      @schedules = @room.schedules
     else
       redirect_to blankroom_room_path
     end
   end
 
   def gallery
-    
+
   end
 
   private
