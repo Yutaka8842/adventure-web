@@ -4,7 +4,7 @@
     <div class="contents-bg"></div>
     <div class="main">
       <div class="main-head">
-        <div class="main-index">AddSchedule</div>
+        <div class="main-index">EditSchedule</div>
       </div>
   <div class="main-area">
   <%= form_with model: [@room, @schedule], id: 'addschedule-form', class: 'addshedule-form', local: true do |f| %>
@@ -17,7 +17,7 @@
     <%= f.label :detail, class:"field-label"%><br />
     <%= f.text_area :detail, class:"field-input f overview", autofocus: true %><br />
 
-    <%= f.submit "Add", class:"actions" %>
+    <%= f.submit "UpDate", class:"actions" %>
     <% end %>
 </div>
     </div>

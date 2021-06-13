@@ -231,9 +231,14 @@ header #header-image{
 color: white;
 padding: 10px;
 border: white solid 1px;
-margin: 0 0 10px 0;
+margin: 0 10px 10px 10px;
 border-radius: 5px;
+display: flex;
 }
+
+.main-head-btns {
+	display: flex;
+	}
 
 .addroom-form{
 	width: 100%;
@@ -274,6 +279,7 @@ border-radius: 5px;
 	overflow: scroll;
 	height:  calc(100% - 40px);
 	padding: 10px;
+	color: #ffffff;
 }
 
 .message{
@@ -491,4 +497,14 @@ padding: 5px;
 .schedule-date{
 	font-size: large;
 	font-weight: bold;
+}
+
+.schedule-show-detail{
+	width: 500px;
+	height: 400px;
+	border: #ffffff solid 1px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+	overflow-y: scroll;
 }

@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :params_current_room
+
   def new
     @room = Room.new
   end
@@ -18,13 +20,9 @@ class RoomsController < ApplicationController
   end
 
   def edit
-    @roomuser = RoomUser.find_by(user_id: current_user.id)
-    @room = Room.find(@roomuser.room_id)
   end
 
   def update
-    @roomuser = RoomUser.find_by(user_id: current_user.id)
-    @room = Room.find(@roomuser.room_id)
     if @room.update(room_update_params)
       redirect_to chatroom_room_path
     else
@@ -33,8 +31,6 @@ class RoomsController < ApplicationController
   end
 
   def destroy
-    @roomuser = RoomUser.find_by(user_id: current_user.id)
-    @room = Room.find(@roomuser.room_id)
     @room.destroy
     redirect_to root_path
   end
@@ -102,6 +98,11 @@ class RoomsController < ApplicationController
 
   def room_update_params
     params.require(:room).permit(:title, :category, :capacity, :overview, :budget, :details)
+  end
+
+  def params_current_room
+    @roomuser = RoomUser.find_by(user_id: current_user.id)
+    @room = Room.find(@roomuser.room_id)
   end
 
 

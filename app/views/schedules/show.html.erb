@@ -1,0 +1,25 @@
+<div class="body">
+  <%= render partial: 'rooms/left_navigation', locals: { room: @room }%>
+  <div class="content">
+    <div class="contents-bg"></div>
+    <div class="main">
+      <div class="main-head">
+        <div class="main-index">ScheduleDetail</div>
+        <div class="main-head-btns">
+        <div class="main-head-btn">
+          <%= link_to "Schedule Edit", edit_room_schedule_path %>
+          </div>
+        <div class="main-head-btn">
+          <%= link_to "Schedule Delete", room_schedule_path, method: :delete %>
+        </div>
+        </div>
+      </div>
+        <div class="main-area">
+          <div class="detail-label">Title</div>
+          <div class="title"> <%= @schedule.date %></div>
+          <div class="detail-label">Details</div>
+          <div class="schedule-show-detail"><%= @schedule.detail %></div>
+            </div>
+    </div>
+  </div>
+</div>

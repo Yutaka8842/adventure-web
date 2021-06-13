@@ -1,5 +1,5 @@
 <div class="body">
-  <%= render partial: 'left_navigation'%>
+  <%= render partial: 'left_navigation', locals: { room: @room }%>
   <div class="content">
     <div class="contents-bg"></div>
     <div class="main">
@@ -10,7 +10,7 @@
       <div class="main-area">
         <% @schedules.each do |schedules| %>
           <div class="schedule-container">
-            <div class="schedule-date"><%= schedules.date %></div>
+            <div class="schedule-date"><%= link_to schedules.date, room_schedule_path(schedules.room_id, schedules.id) %></div>
             <div class="schedule-detail"><%= schedules.detail %></div>
           </div>
         <% end %>
