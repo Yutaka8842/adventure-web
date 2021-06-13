@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       get 'schedule',   to: 'rooms#schedule'
       get 'gallery',    to: 'rooms#gallery'
       post 'join',      to: 'rooms#join'
-      get 'exit',    to: 'rooms#exit'
+      get 'exit',       to: 'rooms#exit'
     end
   end
 end
