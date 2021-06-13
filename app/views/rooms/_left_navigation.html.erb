@@ -4,9 +4,8 @@
       <li><%= link_to "MyPage", mypage_room_path(current_user), class:"nav-list" %></li>
       <li><%= link_to "ChatRoom", chatroom_room_path(current_user), class:"nav-list" %></li>
       <li><%= link_to "RoomSearch", roomsearch_room_path(current_user), class:"nav-list" %></li>
-      <li><%= link_to "Todo", todo_room_path(room.id), class:"nav-list" %></li>
       <li><%= link_to "Schedule", schedule_room_path(room.id), class:"nav-list" %></li>
-      <li><%= link_to "Gallery", gallery_room_path(room.id), class:"nav-list" %></li>
+      <!--<li><%= link_to "Gallery", gallery_room_path(room.id), class:"nav-list" %></li>-->
     </ul>
     <div class="logout"><%= link_to "LogOut", destroy_user_session_path, method: :delete %></div>
   </div>
