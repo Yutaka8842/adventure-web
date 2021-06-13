@@ -6,9 +6,9 @@
       <div class="main-head">
         <div class="main-index">ChatRoom</div>
         <div class="main-head-btns">
-        <div class="main-head-btn" ><%= link_to "Edit Room", edit_room_path %></div>
+        <div class="main-head-btn" ><%= link_to "Edit Room", edit_room_path(@room.id) %></div>
         <% if @room.leader == current_user.id %>
-          <div class="main-head-btn" ><%= link_to "Delete Room", room_path, method: :delete %></div>
+          <div class="main-head-btn" ><%= link_to "Delete Room", room_path(@room.id), method: :delete %></div>
         <% else %>
           <div class="main-head-btn" ><%= link_to "Exit Room", exit_room_path %></div>
         <% end %>
