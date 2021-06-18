@@ -10,7 +10,7 @@
         <% if @room.leader == current_user.id %>
           <div class="main-head-btn" ><%= link_to "Delete Room", room_path(@room.id), method: :delete %></div>
         <% else %>
-          <div class="main-head-btn" ><%= link_to "Exit Room", exit_room_path %></div>
+          <div class="main-head-btn" ><%= link_to "Exit Room", exit_room_path(@room.id) %></div>
         <% end %>
         </div>
       </div>
