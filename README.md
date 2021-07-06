@@ -69,9 +69,9 @@
   - Unicorn
   - Capistrano
 
+# インフラ構成図
+[![Image from Gyazo](https://i.gyazo.com/4eb6c93862c2bfd25d89e9208da579b2.jpg)](https://gyazo.com/4eb6c93862c2bfd25d89e9208da579b2)
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/a56a6d276aac6a85d68b156c8cf9469f.png)](https://gyazo.com/a56a6d276aac6a85d68b156c8cf9469f)
 
-# インフラ構成図
-[![Image from Gyazo](https://i.gyazo.com/4eb6c93862c2bfd25d89e9208da579b2.jpg)](https://gyazo.com/4eb6c93862c2bfd25d89e9208da579b2)
