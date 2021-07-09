@@ -95,6 +95,8 @@ header #header-image{
 
 .body{
   display: flex;
+	width: 100%;
+	height: 100%;
 }
 
 .left-navigation{
@@ -102,7 +104,7 @@ header #header-image{
   height: 100vh;
   background-color: #000;
 	position: relative;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .nav-logo{
@@ -136,15 +138,14 @@ header #header-image{
 
 
 .content{
-  width: calc(100vw - 200px);
-  height: 100vh;
+	width: calc(100vw - 200px);
   background-color: black;
 	position: relative;
 }
 
 .contents-bg{
+	width: calc(100vw - 200px);
 	height: 100%;
-	width: 100%;
 	background: image-url("hoshizora2.jpg") no-repeat center center / cover;
 	opacity: 0.5;
 }
@@ -161,6 +162,7 @@ header #header-image{
 	right: 0;
 	border-radius: 5px;
 	padding: 30px;
+	overflow: scroll;
 }
 
 .message-form{
@@ -203,13 +205,16 @@ header #header-image{
 	left: 0;
 	border-radius: 5px;
 	padding: 30px;
+	overflow: scroll;
 }
+
 .main-head{
 	height: 50px;
-	width: 100%;
+	min-width: 500px;
 	border-bottom: 1px solid white;
 	display: flex;
 	justify-content: space-between;
+	overflow: scroll;
 }
 
 .main-index{
@@ -326,9 +331,11 @@ justify-content: space-between;
 	border: white solid 1px;
 	border-radius: 10px;
 	width: calc(100% / 3 - 20px);
+	min-width: 150px;
 	height: 200px;
 	margin: 10px;
 	padding: 20px;
+	overflow: scroll;
 }
 
 .room-title{
@@ -477,12 +484,10 @@ padding: 5px;
 .schedule-container{
 	padding: 10px;
 	height: 100px;
-	width: 500px;
 	color: #ffffff;
 	border: 1px solid #ffffff;
 	border-radius: 5px;
 	margin: 10px 0 15px 0;
-	overflow: scroll;
 }
 
 .schedule-date{
