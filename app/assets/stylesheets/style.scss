@@ -271,6 +271,7 @@ header #header-image{
 .upload-file{
 	display: none;
 }
+
 .main-area{
 	overflow: scroll;
 	height:  calc(100% - 40px);
@@ -279,13 +280,15 @@ header #header-image{
 }
 
 .message{
-margin: 10px;
-padding: 10px;
-color: white;
-border-top: white solid 1px;
-border-bottom: white solid 1px;
-display: flex;
-justify-content: space-between;
+	margin: 10px;
+	padding: 10px;
+	color: white;
+	border-top: white solid 1px;
+	border-bottom: white solid 1px;
+	display: flex;
+	justify-content: space-between;
+	overflow-x: scroll;
+	min-width: 450px;
 }
 
 .message-user-icon{
@@ -418,11 +421,11 @@ justify-content: space-between;
 }
 
 
-	.user-icon{
-		border-radius: 20px;
-		height: 125px;
-		margin: 10px 0 0 10px;
-	}
+.user-icon{
+	border-radius: 20px;
+	height: 125px;
+	margin: 10px 0 0 10px;
+}
 
 .name{
 	color: #ffffff;
@@ -477,9 +480,9 @@ border-radius: 5px;
 padding: 5px;
  }
 
- .addshedule-form{
-	 width: 200px;
- }
+.addshedule-form{
+	width: 200px;
+}
 
 .schedule-container{
 	padding: 10px;
