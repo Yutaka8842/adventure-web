@@ -19,7 +19,7 @@
 
 
 # URL
-- https://adventure-web.com/
+- https://adventure-web.com
 
 # DEMO
 <img src="https://i.gyazo.com/df226cb9ee5a0da7a36e1ae19611cc6e.jpg" width="300px">
